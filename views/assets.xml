@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="assets_frontend" inherit_id="website.assets_frontend" name="HTML snippet frontend assets">
+    <xpath expr="." position="inside">
+        <link rel="stylesheet"
+              href="/website_job_snippet/static/src/scss/snippet.scss"/>
+    </xpath>
+</template>
+
+<template id="assets_editor" inherit_id="website.assets_editor">
+    <xpath expr="script[last()]" position="after">
+        <script type="text/javascript"
+                src="/website_job_snippet/static/src/js/lz-string.min.js"/>     
+        <script type="text/javascript"
+                src="/website_job_snippet/static/src/js/jobs.js"/>
+    </xpath>
+</template>
+
+</odoo>

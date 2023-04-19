@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="dynamic_job" name="Dynamic Job Snippet">
+        <section class="oe_snippet_body dynamic_job" data-snippetHTML="" data-snippetHTMLOld="">
+            <div class="container">
+                <div class="text-center py-5">
+                    <h2 class="h1">Dynamic Job Display Snippet</h2>
+                     </div>
+                <div class="row justify-content-center" id="get_lists">
+                <div class="col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <h5 class="mb-0">Job Position:</h5>
+                            <h5 class="mb-0">Department:</h5>
+                            <h5 class="mb-0">Job Location:</h5>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]">
+            <t t-snippet="website_job_snippet.dynamic_job"
+               t-thumbnail="/website_job_snippet/static/src/img/icon.png"/>
+        </xpath>
+    </template>
+</odoo>
